@@ -31,7 +31,7 @@
             <h2>a better way to camp</h2>
             </div>
             <div class="col-md-4 col-xl-2">
-                <a role="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-lg btn-info text-nowrap" id="reserveButton">Reserve Campsite</a>
+                <a role="button" class="btn btn-lg btn-info text-nowrap" id="reserveButton">Reserve Campsite</a>
             </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content modal-lg">
-                <div class="modal-header bg-info text-white">
+                <div class="modal-header">
                     <h3 class="modal-title">reserve a Campsite</h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -50,7 +50,7 @@
                             <div class="form-group row">
                                 <label for="numcampers" class="col-sm-6 col-form-label">Number of campers</label>
                                 <div class="col">
-                                    <select id="numcampers" id="numCampers" class="form-control">
+                                    <select id="numcampers"  class="form-control">
                                         <option selected value="" type="text">Select...</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -72,17 +72,17 @@
                                 <div class="col">
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-success active">
-                                            <input type="radio" name="siteType" id="siteTent" value="tent" checked> Tent
+                                            <input type="radio" name="siteType" id="siteTent" value="tent" checked/> Tent
                                         </label>
                                         <label class="btn btn-primary">
-                                            <input type="radio" name="siteType" id="siteRV" value="RV"> RV
+                                            <input type="radio" name="siteType" id="siteRV" value="RV"/> RV
                                         </label>
                                     </div>
                                 </div>
 
 
                             </div>
-                            </div>
+                            
                             <div class="form-group row">
                                 <div class="col">
                                     <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -98,7 +98,7 @@
  
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" height="30" width="30"></a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" height="30" width="30"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -111,7 +111,7 @@
         </ul>
        
         <span class="navbar-text ml-auto">
-            <a role="button" data-toggle="modal" data-target="#loginModal">
+            <a role="button" id="loginButton">
                 <i class="fa fa-sign-in"></i> Login
             </a>
         </span>
@@ -132,15 +132,15 @@
                             <div class="form-row">
                                 <div class="form-group col-12">
                                     <label class="sr-only" for="loginEmail">Email address</label>
-                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email"/>
                                 </div>
                                 <div class="form-group col-12">
                                     <label class="sr-only" for="loginPassword">Password</label>
-                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password"/>
                                 </div>
                                 <div class="col">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox">
+                                        <input class="form-check-input" type="checkbox"/>
                                         <label class="form-check-label"> Remember me</label>
                                     </div>
                                 </div>
