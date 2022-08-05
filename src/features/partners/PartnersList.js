@@ -1,9 +1,13 @@
 import { Col } from "reactstrap";
 import Partner from "./Partner";
 import { selectAllPartners } from "./partnersSlice";
+import { useSelector } from "react-redux";
+import { selectCommentsByCampsiteId } from "../comments/commentsSlice";
+
+const comments = useSelector(selectCommentsByCampsiteId(campsiteId));
 
 const PartnersList = () => {
-  const partners = selectAllPartners();
+  const partners = useSelector(selectAllPartners);
   return (
     <Col className="mt-4">
       {partners.map((partner) => {
