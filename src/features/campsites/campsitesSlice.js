@@ -10,7 +10,7 @@ const campsitesSlice = createSlice({
     initialState
 })
 
-export const selectAllCampsites = () => {
+export const selectAllCampsites = (state) => {
     return CAMPSITES;
 };
 
@@ -18,10 +18,10 @@ export const selectAllCampsites = () => {
 //    return CAMPSITES[Math.floor(CAMPSITES.length * Math.random())];
 //};
 
-export const selectCampsiteById = (id) => {
+export const selectCampsiteById = (id) => (state) => {
     return CAMPSITES.find((campsite) => campsite.id === parseInt(id));
 };
 
-export const selectFeaturedCampsite = () => {
+export const selectFeaturedCampsite = (state) => {
     return CAMPSITES.find((campsite) => campsite.featured);
 };
