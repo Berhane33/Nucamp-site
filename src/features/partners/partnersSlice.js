@@ -1,9 +1,9 @@
-import { PARTNERS } from '../../app/shared/PARTNERS';
+//import { PARTNERS } from '../../app/shared/PARTNERS';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { baseUrl } from '../../app/shared/baseUrl';
 import { mapImageUrl } from '../../utils/mapImageUrl';
 
-export const fetchPatners = createAsyncThunk(
+export const fetchPartners = createAsyncThunk(
     'partners/fetchPartners',
     async () => {
         const response = await fetch(baseUrl + 'partners');
@@ -26,15 +26,15 @@ const partnersSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: {
-        [fetchPatners.pending]: (state) => {
+        [fetchPartners.pending]: (state) => {
             state.isLoading = true;
         },
-        [fetchPatners.fulfilled]: (state, action) => {
+        [fetchPartners.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.errMsg = '';
             state.partnersArray = mapImageUrl(action.payload);
         },
-        [fetchPatners.rejected]: (state, action) => {
+        [fetchPartners.rejected]: (state, action) => {
             state.isLoading = false;
             state.errMsg = action.error ? action.error.message : 'Fetch failed';
         }
